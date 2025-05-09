@@ -1,7 +1,13 @@
 const express = require('express');
 const axios = require('axios');
 const dotenv = require('dotenv');
+import axios from 'axios';
 
+// Kullanımı:
+async function fetchData() {
+  const res = await axios.get('https://api.coingecko.com/api/v3/ping');
+  console.log(res.data);
+  
 // .env dosyasındaki çevresel değişkenleri yükle
 dotenv.config();
 
